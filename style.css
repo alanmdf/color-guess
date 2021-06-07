@@ -14,3 +14,7 @@ body {
   width: 75px;
   height: 75px;
 }
+
+#answer {
+  font-size: 20px;
+}
