@@ -5,6 +5,8 @@ window.onload = function () {
   const button = document.getElementById('reset-game');
   answer.innerText = 'Escolha uma cor';
 
+  
+
   function createBalls () {
     for (let index = 0; index < 6; index += 1) {
       const ball = document.createElement('div');
@@ -31,13 +33,26 @@ window.onload = function () {
   
   ballsSection.addEventListener('click', checkColor)
 
+  let correctAnswer = false;
+
+  let addPoints = 0;
+  
+
   function checkColor (element) {
     if (element.target.style.backgroundColor === rgbColor.innerText ) {
       answer.innerText = 'Acertou!';
+      correctAnswer = true;
+      addPoints += 3;
+      score.innerText = 'Placar: ' + addPoints;
     } else {
       answer.innerText = 'Errou! Tente novamente!';
     }
+    console.log(answer.innerText);
+    console.log(correctAnswer);
   }
+
+  const score = document.getElementById('score');
+  score.innerText = 'Placar: ' + addPoints;
 
   button.addEventListener('click', resetGame) 
   function resetGame () {
