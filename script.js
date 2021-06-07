@@ -8,6 +8,12 @@ window.onload = function() {
     for (let index = 0; index < 6; index += 1) {
       let ball = document.createElement('div');
       ball.className = 'ball'
+      let color1 = parseInt((Math.random() * 255) + 1);
+      let color2 = parseInt((Math.random() * 255) + 1);
+      let color3 = parseInt((Math.random() * 255) + 1);
+      let color = `rgb(${color1}, ${color2}, ${color3})`;
+      console.log(color);
+      ball.style.backgroundColor = color;
       ballsSection.appendChild(ball);
     }
   }
