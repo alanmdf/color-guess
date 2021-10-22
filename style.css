@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+#rgb-color {
+  font-size: 30px;
+}
+
+.ball { 
+  border: 1px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 5px;
+  width: 75px;
+  height: 75px;
+}
+
+#answer {
+  font-size: 20px;
+}
